@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aligarh College Of Engineering & Technology (ACET) | अलीगढ़ कॉलेज ऑफ़ इंजीनियरिंग & टेक्नोलॉजी</title>
+  <meta name="description" content="Official Portal of Aligarh College of Engineering & Technology (ACET), Aligarh. Approved by AICTE & PCI, Affiliated to AKTU Lucknow & BTE UP. Offering B.Tech, B.Pharma, D.Pharma, MBA, MCA, BBA, BCA, and Polytechnic at Mathura Bypass Rd, Sasni Gate.">
+  <meta name="keywords" content="ACET Aligarh, Aligarh College of Engineering and Technology, acetup.org, B.Tech Aligarh, Aligarh College of Pharmacy, Engineering College Sasni Gate, AKTU College 096">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/acet_official_logo.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e5edff',
+              600: '#1e40af',
+              700: '#1d4ed8',
+              800: '#1e3a8a',
+              900: '#0f2459',
+              950: '#0b1938',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- Top Notification & Contact Bar -->
+  <div class="bg-brand-950 text-slate-300 text-xs border-b border-brand-900 relative z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-y-2">
+      <div class="flex items-center flex-wrap gap-4 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5 text-amber-400 font-semibold">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>AKTU Code: 096 | AICTE &amp; PCI Approved</span>
+        </span>
+        <span class="hidden md:inline-block text-slate-500">|</span>
+        <a href="tel:09568200064" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-amber-400"></i>
+          <span>Helpline: 095682 00064 / 10 / 63 / 71</span>
+        </a>
+        <span class="hidden md:inline-block text-slate-500">|</span>
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i class="fa-regular fa-clock text-emerald-400"></i>
+          <span>Mon-Sat: 8:30 AM – 4:30 PM (Opens 8:30 AM Mon)</span>
+        </span>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs">
+        <a href="http://www.acetup.org/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors hidden sm:flex items-center gap-1">
+          <i class="fa-solid fa-globe text-slate-400"></i>
+          <span>acetup.org</span>
+        </a>
+        <button onclick="toggleLanguage()" id="langToggleBtn" class="px-2.5 py-1 rounded-lg bg-brand-900 hover:bg-brand-800 text-white font-medium border border-brand-700/80 transition-colors flex items-center">
+          <i class="fa-solid fa-language text-amber-400 mr-1.5"></i> हिंदी
+        </button>
+        <button onclick="openModal('studentPortalModal')" class="px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold transition-all shadow-sm flex items-center gap-1">
+          <i class="fa-solid fa-user-lock text-[11px]"></i>
+          <span>ERP Portal</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Academic Header -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-md border-b border-slate-200 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <!-- Official Logo & Brand Title -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-amber-500 shadow-md group-hover:scale-105 transition-transform bg-white flex items-center justify-center">
+            <img src="assets/acet_official_logo.jpg" alt="Official ACET Insignia" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold tracking-wider uppercase bg-blue-100 text-blue-900 px-2 py-0.5 rounded">
+                ESTD. 2001
+              </span>
+              <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 hidden sm:inline-block">
+                अभियांत्रिक विज्ञानम् लोक कल्याण साधनम्
+              </span>
+            </div>
+            <h1 class="text-base sm:text-lg md:text-xl font-black text-brand-950 font-heading leading-tight tracking-tight mt-0.5 group-hover:text-blue-900 transition-colors" data-en="Aligarh College Of Engineering & Technology" data-hi="अलीगढ़ कॉलेज ऑफ़ इंजीनियरिंग & टेक्नोलॉजी">
+              Aligarh College Of Engineering &amp; Technology
+            </h1>
+            <p class="text-[11px] text-slate-500 font-medium hidden sm:block">
+              Affiliated to Dr. A.P.J. AKTU Lucknow &amp; BTE UP • Approved by AICTE &amp; PCI New Delhi
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+          <a href="#about" class="hover:text-blue-900 transition-colors">About Us</a>
+          <a href="#programs" class="hover:text-blue-900 transition-colors">Academics</a>
+          <a href="#fee-calculator" class="hover:text-blue-900 transition-colors text-emerald-700 flex items-center gap-1">
+            <i class="fa-solid fa-calculator text-xs"></i> Fee Calculator
+          </a>
+          <a href="#campus" class="hover:text-blue-900 transition-colors">Facilities</a>
+          <a href="#campus-gallery" class="hover:text-amber-600 transition-colors text-blue-950 font-bold flex items-center gap-1">
+            <i class="fa-solid fa-camera-retro text-amber-500"></i> Campus Gallery
+          </a>
+          <a href="#placements" class="hover:text-blue-900 transition-colors">Placements</a>
+          <a href="#reviews" class="hover:text-blue-900 transition-colors">Reviews</a>
+          <a href="#contact" class="hover:text-blue-900 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-3">
+          <button onclick="openSearchModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors" title="Search site (Ctrl+K)">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+          
+          <button onclick="openAdmissionModal()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-900 to-indigo-900 hover:from-blue-800 hover:to-indigo-800 text-white text-xs font-bold rounded-xl shadow-md hover:shadow-lg transition-all animate-badge">
+            <i class="fa-solid fa-file-signature text-amber-400"></i>
+            <span>Apply 2026-27</span>
+          </button>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3 shadow-xl">
+      <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
+        <a href="#about" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">About ACET</a>
+        <a href="#programs" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Engineering &amp; Pharmacy Programs</a>
+        <a href="#fee-calculator" class="py-2 px-3 hover:bg-slate-50 rounded-lg text-emerald-700 font-bold" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Transparent Fee Calculator</a>
+        <a href="#campus" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Campus &amp; AC Labs</a>
+        <a href="#campus-gallery" class="py-2 px-3 hover:bg-amber-50 text-amber-800 font-bold rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">📸 Real Campus Photo Gallery</a>
+        <a href="#placements" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Training &amp; Placements</a>
+        <a href="#reviews" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Community Reviews &amp; Redressal</a>
+        <a href="#contact" class="py-2 px-3 hover:bg-slate-50 rounded-lg" onclick="document.getElementById('mobileDrawer').classList.add('hidden')">Location &amp; Directions</a>
+      </nav>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openAdmissionModal(); document.getElementById('mobileDrawer').classList.add('hidden')" class="w-full py-2.5 bg-blue-900 text-white font-bold text-xs rounded-xl shadow text-center">
+          <i class="fa-solid fa-file-signature mr-1.5 text-amber-400"></i> Apply for Admission 2026-27
+        </button>
+        <button onclick="toggleLanguage()" id="langToggleBtnMobile" class="w-full py-2 bg-slate-100 text-slate-800 font-medium text-xs rounded-xl text-center">
+          <i class="fa-solid fa-language text-amber-500 mr-1.5"></i> भाषा बदलें (हिंदी / English)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Marquee Notice Ticker -->
+  <div class="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-2 overflow-hidden flex items-center">
+    <div class="flex-shrink-0 px-4 font-bold text-xs text-amber-800 uppercase flex items-center gap-1.5 border-r border-amber-300">
+      <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+      <i class="fa-solid fa-bullhorn text-amber-700"></i>
+      <span>Latest Updates</span>
+    </div>
+    <div class="overflow-hidden whitespace-nowrap flex-1">
+      <div class="animate-marquee flex gap-12 text-xs font-semibold text-slate-700">
+        <span class="flex items-center gap-2 cursor-pointer hover:text-blue-900" onclick="openAdmissionModal()">
+          <span class="px-1.5 py-0.5 bg-red-600 text-white rounded text-[10px] font-bold">ADMISSIONS OPEN</span>
+          Direct Admissions Open: B.Tech (CSE, AI/ML, ME, Civil, ECE) | B.Pharma | D.Pharma | MBA | BBA | MCA | BCA | Polytechnic Diploma. Call: 095682 00064 / 10 / 63 / 71
+        </span>
+        <span class="flex items-center gap-2 cursor-pointer hover:text-blue-900" onclick="location.href='#campus-gallery'">
+          <span class="px-1.5 py-0.5 bg-amber-600 text-white rounded text-[10px] font-bold">GALLERY</span>
+          Real Campus Photographs &amp; Modernized Infrastructure updated! Explore our 15-acre green eco-campus at Sasni Gate, Mathura Bypass Road.
+        </span>
+        <span class="flex items-center gap-2 cursor-pointer hover:text-blue-900" onclick="location.href='#fee-calculator'">
+          <span class="px-1.5 py-0.5 bg-blue-600 text-white rounded text-[10px] font-bold">TRANSPARENCY</span>
+          Standardized state-regulated fee policy active. Calculate your transparent fee online with zero hidden costs.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Hero Section with Real Campus Building -->
+  <section class="relative bg-gradient-to-b from-brand-950 via-slate-900 to-brand-950 text-white py-16 md:py-24 overflow-hidden">
+    <!-- Background Animated Shapes -->
+    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none animate-float"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none animate-float-reverse"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-amber-300 text-xs font-semibold backdrop-blur-md">
+            <i class="fa-solid fa-award text-amber-400"></i>
+            <span>Engineering &amp; Pharmacy Excellence in Aligarh Since 2001</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-heading leading-tight tracking-tight" data-en="Empowering Technical Minds with World-Class Engineering Education" data-hi="विश्वस्तरीय इंजीनियरिंग, फार्मेसी और तकनीकी शिक्षा से उज्ज्वल भविष्य का निर्माण">
+            Empowering Minds with <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">World-Class</span> Technical Education
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed mx-auto lg:mx-0" data-en="Aligarh College of Engineering & Technology (ACET) stands on a lush 15-acre green eco-campus at Mathura Bypass Road, Sasni Gate. Approved by AICTE & permanently affiliated to Dr. APJ Abdul Kalam Technical University (AKTU Lucknow)." data-hi="अलीगढ़ कॉलेज ऑफ़ इंजीनियरिंग & टेक्नोलॉजी (ACET) सासनी गेट, मथुरा बाईपास रोड पर 15 एकड़ के हरे-भरे शांत परिसर में स्थित है। AICTE एवं PCI द्वारा अनुमोदित और डॉ एपीजे अब्दुल कलाम टेक्निकल यूनिवर्सिटी (AKTU) से संबद्ध।">
+            "Education is the foundation upon which we build our future." ACET stands on a lush 15-acre green eco-campus at Mathura Bypass Road, Sasni Gate, Aligarh. Offering B.Tech, B.Pharma, D.Pharma, MBA, MCA, BBA, BCA, and Polytechnic Diplomas.
+          </p>
+
+          <!-- Key Highlights Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs text-slate-200">
+            <span class="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10 backdrop-blur-sm">
+              <i class="fa-solid fa-snowflake text-cyan-400"></i> Central AC Computer Labs
+            </span>
+            <span class="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10 backdrop-blur-sm">
+              <i class="fa-solid fa-leaf text-emerald-400"></i> Clean &amp; Green 15-Acre Campus
+            </span>
+            <span class="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10 backdrop-blur-sm">
+              <i class="fa-solid fa-capsules text-amber-400"></i> Aligarh College of Pharmacy
+            </span>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+            <button onclick="openAdmissionModal()" class="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-extrabold text-sm rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center gap-2 pulse-glow-gold">
+              <i class="fa-solid fa-graduation-cap text-base"></i>
+              <span>Apply for Admissions 2026</span>
+            </button>
+            <a href="#campus-gallery" class="px-5 py-3.5 bg-white/10 hover:bg-white/15 text-white font-bold text-sm rounded-2xl border border-white/20 backdrop-blur-md transition-all flex items-center gap-2">
+              <i class="fa-solid fa-camera text-amber-400"></i>
+              <span>Campus Photo Gallery</span>
+            </a>
+            <a href="#fee-calculator" class="px-4 py-3.5 text-slate-300 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-calculator text-amber-400"></i>
+              <span>Calculate Fee</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card with Real College Photo -->
+        <div class="lg:col-span-5 relative" data-aos="fade-left">
+          <div class="relative mx-auto max-w-md bg-gradient-to-b from-white/10 to-white/5 p-2 rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl animate-float">
+            <!-- Real College Main Photo -->
+            <div class="relative h-72 rounded-2xl overflow-hidden shadow-inner group cursor-pointer" onclick="openLightbox('assets/campus_front.jpg', 'Aligarh College of Engineering & Technology', 'Real photo of ACET Academic Building, Sasni Gate, Mathura Bypass Road')">
+              <img src="assets/campus_front.jpg" alt="ACET Green Academic Campus Real Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 bg-amber-500 text-slate-950 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider shadow">
+                Authentic Campus Photo
+              </div>
+
+              <!-- Floating Location Pill -->
+              <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md p-3 rounded-xl border border-white/15 flex items-center justify-between">
+                <div>
+                  <h4 class="text-xs font-bold text-white flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Mathura Bypass Rd, Sasni Gate
+                  </h4>
+                  <p class="text-[11px] text-slate-400">R3W3+49, Aligarh, UP 202002</p>
+                </div>
+                <a href="#contact" class="px-2.5 py-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-[11px] rounded-lg transition-colors">
+                  Directions
+                </a>
+              </div>
+            </div>
+
+            <!-- Stats Bar Below Image with Animated Counters -->
+            <div class="grid grid-cols-3 gap-2 p-3 text-center">
+              <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+                <span class="block text-xl font-extrabold text-amber-400 font-heading" data-counter="24" data-suffix="+">24+</span>
+                <span class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Years Legacy</span>
+              </div>
+              <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+                <span class="block text-xl font-extrabold text-emerald-400 font-heading" data-counter="86" data-suffix="%">86%</span>
+                <span class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Placement</span>
+              </div>
+              <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+                <span class="block text-xl font-extrabold text-blue-400 font-heading" data-counter="14.5" data-prefix="₹" data-suffix="L" data-decimal="true">₹14.5L</span>
+                <span class="text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Max CTC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Access Action Hub -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div onclick="openAdmissionModal()" class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-lg hover-lift cursor-pointer flex items-center gap-4 group" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center text-xl group-hover:bg-blue-900 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Admissions</h3>
+          <p class="text-sm font-extrabold text-slate-900">Apply Online 2026</p>
+        </div>
+      </div>
+
+      <a href="#fee-calculator" class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-lg hover-lift cursor-pointer flex items-center gap-4 group" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl group-hover:bg-emerald-800 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Transparency</h3>
+          <p class="text-sm font-extrabold text-slate-900">Fee Calculator</p>
+        </div>
+      </a>
+
+      <a href="#campus-gallery" class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-lg hover-lift cursor-pointer flex items-center gap-4 group" data-aos="fade-up" data-aos-delay="150">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl group-hover:bg-amber-800 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-camera-retro"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Campus View</h3>
+          <p class="text-sm font-extrabold text-slate-900">Real Photo Gallery</p>
+        </div>
+      </a>
+
+      <a href="#reviews" class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-lg hover-lift cursor-pointer flex items-center gap-4 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-900 flex items-center justify-center text-xl group-hover:bg-purple-900 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase text-slate-400 tracking-wider">Student Voice</h3>
+          <p class="text-sm font-extrabold text-slate-900">Support &amp; Redressal</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- About ACET Section -->
+  <section id="about" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Image Composition -->
+        <div class="lg:col-span-5 relative" data-aos="fade-right">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white cursor-pointer group" onclick="openLightbox('assets/campus_banner.jpg', 'Aligarh College of Engineering & Technology & Pharmacy', 'Campus Overview')">
+            <img src="assets/campus_banner.jpg" alt="ACET Campus Banner" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+          </div>
+          <!-- Experience Badge -->
+          <div class="absolute -bottom-6 -right-6 bg-brand-950 text-white p-5 rounded-2xl shadow-xl border-2 border-amber-400 flex items-center gap-4 max-w-xs animate-float">
+            <div class="text-3xl font-black text-amber-400 font-heading">24+</div>
+            <div class="text-xs leading-tight">
+              <strong class="block text-slate-100 font-bold">Years of Academic Legacy</strong>
+              <span class="text-slate-400">Engineering &amp; Pharmacy Since 2001</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block mb-2">
+              About The Institution
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 font-heading leading-tight">
+              Leading the Frontier of Technical &amp; Professional Education
+            </h2>
+          </div>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            <strong>Aligarh College of Engineering and Technology (ACET)</strong> was established in 2001 under the visionary leadership of eminent educationists. Operating alongside the <strong>Aligarh College of Pharmacy (Estd. 2006)</strong>, our sprawling 15-acre green eco-campus at Mathura Bypass Road, Sasni Gate, Aligarh provides an inspiring educational environment.
+          </p>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Approved by <strong>AICTE &amp; PCI New Delhi</strong>, and affiliated to <strong>Dr. A.P.J. Abdul Kalam Technical University (AKTU Lucknow, Code: 096)</strong> and <strong>BTE UP</strong>, ACET is dedicated to developing industry-ready engineers, pharmacists, managers, and software professionals.
+          </p>
+
+          <!-- 4 Feature Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+              <i class="fa-solid fa-certificate text-amber-600 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">AICTE, PCI &amp; AKTU Affiliation</h4>
+                <p class="text-[11px] text-slate-500">Government recognized degrees offering global equivalence and GATE/GPAT eligibility.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+              <i class="fa-solid fa-tree text-emerald-600 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">15-Acre Green Botanical Flora</h4>
+                <p class="text-[11px] text-slate-500">Pollution-free learning environment with clean lawns, solar panels and shaded trees.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+              <i class="fa-solid fa-snowflake text-cyan-600 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">Upgraded AC Computer Centers</h4>
+                <p class="text-[11px] text-slate-500">200+ Core i7 computers with high-speed 100 Mbps fiber internet and developer toolchains.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+              <i class="fa-solid fa-hand-holding-dollar text-blue-600 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">UP Scholarship Facilitation</h4>
+                <p class="text-[11px] text-slate-500">Dedicated desk ensuring state fee reimbursement for eligible SC/ST/OBC/EWS scholars.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openModal('prospectusModal')" class="px-5 py-2.5 bg-blue-950 hover:bg-blue-900 text-white font-bold text-xs rounded-xl shadow transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-file-arrow-down text-amber-400"></i> Download Prospectus
+            </button>
+            <a href="#campus-gallery" class="text-xs font-bold text-blue-900 hover:text-amber-600 transition-colors flex items-center gap-1">
+              View Campus Photos <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Programs Hub -->
+  <section id="programs" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block mb-2">
+          Academic Offerings
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+          Explore Our Engineering, Pharmacy &amp; Professional Programs
+        </h2>
+        <p class="text-sm text-slate-600 mt-3">
+          Comprehensive degree programs approved by AICTE, PCI &amp; AKTU Lucknow: B.Tech, B.Pharma, D.Pharma, MBA, MCA, BBA, BCA, and Polytechnic Engineering Diplomas.
+        </p>
+
+        <!-- Course Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <button onclick="filterCourses('all', this)" class="course-tab px-4 py-2 rounded-xl text-xs font-bold bg-blue-950 text-white shadow transition-all">
+            All Programs
+          </button>
+          <button onclick="filterCourses('btech', this)" class="course-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            B.Tech Engineering
+          </button>
+          <button onclick="filterCourses('pharmacy', this)" class="course-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Pharmacy (B.Pharma / D.Pharma)
+          </button>
+          <button onclick="filterCourses('pg', this)" class="course-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Management &amp; IT (MBA/MCA/BBA/BCA)
+          </button>
+          <button onclick="filterCourses('diploma', this)" class="course-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Polytechnic Diploma
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Course Grid Container -->
+      <div id="coursesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparent Fee Structure & Affordability Calculator -->
+  <section id="fee-calculator" class="py-20 bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/10 px-3 py-1 rounded-md border border-amber-400/20 inline-block mb-2">
+          Institutional Fee Transparency
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          Transparent Fee Calculator &amp; Scholarship Estimator
+        </h2>
+        <p class="text-sm text-slate-300 mt-3">
+          In response to student feedback, ACET enforces a 100% transparent fee policy in strict compliance with the UP State Fee Regulatory Committee. Calculate your exact yearly investment with zero hidden charges.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Calculator Inputs -->
+        <div class="lg:col-span-6 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/15 shadow-xl space-y-5" data-aos="fade-right">
+          <h3 class="text-base font-bold text-amber-400 flex items-center gap-2">
+            <i class="fa-solid fa-sliders"></i> Select Your Enrollment Preferences
+          </h3>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Select Degree &amp; Program</label>
+            <select id="calcCourse" onchange="calculateFee()" class="w-full bg-slate-900/90 text-white border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-amber-400">
+              <!-- Populated by JavaScript -->
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Quota &amp; Scholarship Category</label>
+            <select id="calcQuota" onchange="calculateFee()" class="w-full bg-slate-900/90 text-white border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-amber-400">
+              <option value="general">Standard AKTU Counseling / Direct Quota</option>
+              <option value="merit">Merit Scholar (>80% in 10+2 / Diploma - 25% Tuition Waiver)</option>
+              <option value="sc_st_up">UP Post-Matric Scholarship Eligible (SC/ST/OBC - Govt Reimbursed)</option>
+              <option value="girl_child">Beti Bachao Beti Padhao Special Scholarship (₹5,000 Waiver)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase mb-2">Hostel &amp; Transportation Facility</label>
+            <select id="calcHostel" onchange="calculateFee()" class="w-full bg-slate-900/90 text-white border border-white/20 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-amber-400">
+              <option value="none">Day Scholar (Own Commute)</option>
+              <option value="bus">College Bus Transit (Aligarh City / Sasni Gate / Bypass)</option>
+              <option value="seater3">Campus Hostel (3-Seater with Meals, Wi-Fi &amp; Laundry)</option>
+              <option value="seater2">Campus Hostel (2-Seater with Meals, Wi-Fi &amp; Laundry)</option>
+            </select>
+          </div>
+
+          <div class="pt-2 text-xs text-slate-400 flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+            <span>Approved under UP Govt. G.O. Fee Structure. Digital receipts issued for all payments.</span>
+          </div>
+        </div>
+
+        <!-- Calculator Breakdown Card -->
+        <div class="lg:col-span-6 bg-white text-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-2xl space-y-6" data-aos="fade-left">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">Estimated Annual Cost</span>
+              <h3 class="text-xl font-black text-blue-950 font-heading">Itemized Fee Breakdown</h3>
+            </div>
+            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[11px] font-bold rounded-lg border border-emerald-200">
+              Official 2026-27 Rate
+            </span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-slate-600">Standard Annual Tuition Fee</span>
+              <span id="breakdownTuition" class="font-bold text-slate-900">₹55,000</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-slate-600">AKTU University &amp; Examination Fee</span>
+              <span id="breakdownExam" class="font-bold text-slate-900">₹7,500</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-slate-600">Lab, Library &amp; Development Fund</span>
+              <span id="breakdownLab" class="font-bold text-slate-900">₹4,500</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-slate-600">Refundable Security / Caution Money</span>
+              <span id="breakdownCaution" class="font-bold text-slate-900">₹3,000 (Refundable)</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+              <span class="text-slate-600">Hostel / Bus Transport Add-on</span>
+              <span id="breakdownHostel" class="font-bold text-slate-900">₹0 (Day Scholar)</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100 text-emerald-700">
+              <span class="font-semibold">Applied Merit / Category Scholarship</span>
+              <span id="breakdownDiscount" class="font-bold">- ₹0</span>
+            </div>
+          </div>
+
+          <div class="bg-blue-50/80 p-4 rounded-2xl border border-blue-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs uppercase font-bold text-blue-900 block">Total Net Estimated Payable</span>
+              <span class="text-[11px] text-slate-500">Payable in 2 easy semester installments</span>
+            </div>
+            <div id="breakdownTotal" class="text-2xl font-black text-blue-950 font-heading">
+              ₹70,000
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <button onclick="openAdmissionModal()" class="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow-md transition-all text-center">
+              Lock This Fee &amp; Apply Now
+            </button>
+            <a href="tel:09568200064" class="px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors text-center whitespace-nowrap">
+              <i class="fa-solid fa-phone text-amber-600"></i> Talk to Accounts
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Infrastructure Highlights -->
+  <section id="campus" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-aos="fade-up">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block mb-2">
+            Infrastructure &amp; Amenities
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+            Modernized Facilities on a 15-Acre Eco-Campus
+          </h2>
+          <p class="text-sm text-slate-600 mt-2 max-w-2xl">
+            "Well maintained Infrastructure, Clean and green plants" — Experience a harmonious campus blending ecological serenity with high-tech computational engineering power.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterFacilities('all', this)" class="facility-tab px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-950 text-white shadow">
+            All
+          </button>
+          <button onclick="filterFacilities('labs', this)" class="facility-tab px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Air-Conditioned Labs
+          </button>
+          <button onclick="filterFacilities('campus', this)" class="facility-tab px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Lush Flora &amp; Hostels
+          </button>
+          <button onclick="filterFacilities('library', this)" class="facility-tab px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200">
+            Digital Library
+          </button>
+        </div>
+      </div>
+
+      <div id="facilitiesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Training & Placements Section -->
+  <section id="placements" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block">
+            Career Advancement Cell
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading leading-tight">
+            Bridging Academic Learning with Corporate Success
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            The Training &amp; Placement Cell at ACET conducts regular aptitude bootcamps, mock technical interviews, full-stack coding sprints, and industry internships starting from the third year.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="text-3xl font-black text-blue-900 font-heading">₹14.5 LPA</span>
+              <p class="text-xs font-semibold text-slate-600 mt-1">Highest Package Offered</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="text-3xl font-black text-emerald-700 font-heading">₹4.8 LPA</span>
+              <p class="text-xs font-semibold text-slate-600 mt-1">Average Starting CTC</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="text-3xl font-black text-amber-600 font-heading">80+</span>
+              <p class="text-xs font-semibold text-slate-600 mt-1">Recruiting Corporates</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="text-3xl font-black text-purple-700 font-heading">86%</span>
+              <p class="text-xs font-semibold text-slate-600 mt-1">Placement Rate (2025)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recruiters Grid -->
+        <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200" data-aos="fade-left">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6 text-center">
+            Our Esteemed Campus Recruitment Partners
+          </h3>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-building text-blue-900 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">TCS</span>
+              <span class="text-[10px] text-slate-400">Tata Consultancy</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-network-wired text-blue-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Infosys</span>
+              <span class="text-[10px] text-slate-400">IT &amp; Consulting</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-code text-emerald-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Wipro</span>
+              <span class="text-[10px] text-slate-400">Digital Solutions</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-gear text-red-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Tech Mahindra</span>
+              <span class="text-[10px] text-slate-400">Enterprise Tech</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-cloud text-cyan-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">HCL Tech</span>
+              <span class="text-[10px] text-slate-400">Global IT Services</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-brain text-purple-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Cognizant</span>
+              <span class="text-[10px] text-slate-400">AI &amp; Analytics</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-wallet text-sky-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Paytm</span>
+              <span class="text-[10px] text-slate-400">FinTech</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-pills text-teal-600 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">Cipla Healthcare</span>
+              <span class="text-[10px] text-slate-400">Pharma Global</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center shadow-xs hover-lift">
+              <i class="fa-solid fa-industry text-indigo-700 text-xl mb-1"></i>
+              <span class="text-xs font-extrabold text-slate-800">L&amp;T Heavy Engg</span>
+              <span class="text-[10px] text-slate-400">Core Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Reviews & Grievance Redressal / Quality Upgrades Section -->
+  <section id="reviews" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-aos="fade-up">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block mb-2">
+            Student Voice &amp; Institutional Governance
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+            Authentic Community Feedback &amp; Quality Redressal
+          </h2>
+          <p class="text-sm text-slate-600 mt-2 max-w-2xl">
+            We actively listen to every student voice. See how our administration has taken concrete action to address feedback with transparent fees, modern AC computer labs, and prompt student assistance.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="openModal('writeReviewModal')" class="px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 shadow-sm transition-colors flex items-center gap-2">
+            <i class="fa-regular fa-comment-dots text-amber-600"></i> Write a Review
+          </button>
+          <button onclick="openModal('grievanceModal')" class="px-4 py-2.5 bg-blue-950 hover:bg-blue-900 text-white font-bold text-xs rounded-xl shadow transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-headset text-amber-400"></i> File a Grievance
+          </button>
+        </div>
+      </div>
+
+      <!-- Institutional Accountability Banner -->
+      <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-white p-6 sm:p-8 rounded-3xl border border-blue-900 shadow-xl mb-10" data-aos="zoom-in">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-check-to-slot"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Institutional Accountability &amp; Upgrades Charter (2025-2026)</h3>
+            <p class="text-xs text-slate-300">Direct steps taken by ACET Leadership to resolve community concerns</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 text-xs">
+          <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+            <div class="text-amber-400 font-bold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-snowflake"></i> Lab Air Conditioning Upgrade
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Addressing past complaints regarding hot computer labs, Central AC units have been successfully installed across Computer Labs 1, 2, 3 &amp; 4 along with high-speed fiber internet.
+            </p>
+          </div>
+
+          <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+            <div class="text-amber-400 font-bold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-scale-balanced"></i> Unified Transparent Fee Policy
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Strict uniform state fee schedules enforced per AKTU guidelines with digital receipts. No student pays unauthorized charges or varied fees within the same branch.
+            </p>
+          </div>
+
+          <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+            <div class="text-amber-400 font-bold mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-user-shield"></i> Student Welfare &amp; Polite Helpline
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Trained admission counseling staff and a 24x7 Student Grievance Cell ensure courteous, supportive, and respectful interactions with every parent and candidate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating Summary & Review Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-4 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-5" data-aos="fade-right">
+          <div class="flex items-center gap-4">
+            <div class="text-5xl font-black text-slate-900 font-heading">3.2</div>
+            <div>
+              <div class="flex items-center text-amber-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="text-xs text-slate-500 mt-1 font-semibold">Based on 212 Google Maps Reviews</p>
+            </div>
+          </div>
+
+          <div class="space-y-2 pt-2 border-t border-slate-100 text-xs">
+            <div class="p-2.5 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-100 flex items-start gap-2">
+              <i class="fa-solid fa-quote-left text-emerald-600 mt-0.5"></i>
+              <span>"Well maintained Infrastructure, Clean and green plants."</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-amber-50 text-amber-900 border border-amber-100 flex items-start gap-2">
+              <i class="fa-solid fa-wrench text-amber-600 mt-0.5"></i>
+              <span>Computer labs modernized with central air conditioning.</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-blue-50 text-blue-900 border border-blue-100 flex items-start gap-2">
+              <i class="fa-solid fa-file-shield text-blue-600 mt-0.5"></i>
+              <span>Fee transparency calculator now publicly accessible to all.</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://maps.google.com/?q=Aligarh+College+Of+Engineering+%26+Technology+Sasni+Gate+Aligarh" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 transition-colors">
+              <i class="fa-brands fa-google text-blue-600"></i> View on Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div id="reviewsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Rendered via js/app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Notice Board & FAQ Accordion Section -->
+  <section class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-4" data-aos="fade-right">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded border border-amber-200">
+                Notice Board
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1 font-heading">Recent Circulars &amp; Orders</h3>
+            </div>
+            <span class="text-xs text-blue-900 font-semibold cursor-pointer hover:underline" onclick="showToast('Loading full archive...', 'info')">
+              View All
+            </span>
+          </div>
+
+          <div id="noticesContainer" class="space-y-2.5 bg-slate-50/50 p-4 rounded-3xl border border-slate-200">
+            <!-- Populated via js/app.js -->
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4" data-aos="fade-left">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">
+              Clear Answers
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 font-heading">Frequently Asked Questions</h3>
+          </div>
+
+          <div id="faqsContainer" class="space-y-3">
+            <!-- Populated via js/app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- NEW ANIMATED SECTION: REAL CAMPUS PHOTO GALLERY (LAST MAIN) -->
+  <!-- ======================================================== -->
+  <section id="campus-gallery" class="py-24 bg-gradient-to-b from-slate-900 via-brand-950 to-slate-950 text-white relative overflow-hidden">
+    <!-- Animated background glow -->
+    <div class="absolute -top-40 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none animate-float"></div>
+    <div class="absolute -bottom-40 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none animate-float-reverse"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-500/20 px-3.5 py-1.5 rounded-full border border-amber-400/30 inline-block mb-3 animate-badge">
+          <i class="fa-solid fa-camera mr-1"></i> Campus Life &amp; Infrastructure
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white">
+          हमारे कॉलेज परिसर की वास्तविक झलकियाँ
+        </h2>
+        <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+          Authentic Photographs of Aligarh College of Engineering &amp; Technology (ACET) — Explore our 15-acre lush green campus, modern academic building, air-conditioned computer center, and serene surroundings.
+        </p>
+
+        <!-- Gallery Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <button onclick="filterCampusGallery('all', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-blue-950 text-white border border-amber-400/30 shadow transition-all">
+            All Photographs
+          </button>
+          <button onclick="filterCampusGallery('campus', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+            Real Campus Views
+          </button>
+          <button onclick="filterCampusGallery('labs', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+            Computing Labs &amp; Workshops
+          </button>
+          <button onclick="filterCampusGallery('emblem', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+            Official Crest &amp; Motto
+          </button>
+          <button onclick="filterCampusGallery('sports', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+            Sports &amp; Library
+          </button>
+        </div>
+      </div>
+
+      <!-- Real Campus Photo Gallery Grid -->
+      <div id="campusGalleryContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically via js/app.js with lightbox trigger -->
+      </div>
+
+      <!-- Live Virtual Tour Banner Callout -->
+      <div class="mt-14 bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6" data-aos="fade-up">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl font-bold shadow-lg animate-float">
+            <i class="fa-solid fa-street-view"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white">Want to experience our lush campus in person?</h4>
+            <p class="text-xs text-slate-300">Campus visits and counseling sessions are open Monday to Saturday from 8:30 AM to 4:30 PM.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:09568200064" class="px-5 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs rounded-xl shadow transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone"></i> Call 095682 00064
+          </a>
+          <button onclick="openModal('virtualTourModal')" class="px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-bold text-xs rounded-xl border border-white/20 transition-colors">
+            Interactive Tour
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Location, Transit & Directions Guide -->
+  <section id="contact" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-md border border-amber-200 inline-block mb-2">
+          Campus Location &amp; Visit
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+          Visit Aligarh College of Engineering &amp; Technology
+        </h2>
+        <p class="text-sm text-slate-600 mt-3">
+          Located on Mathura Bypass Road, Sasni Gate, Aligarh. Open for campus visits, counseling, and laboratory walk-throughs Monday to Saturday from 8:30 AM to 4:30 PM.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Contact & Transit Info -->
+        <div class="lg:col-span-5 space-y-5" data-aos="fade-right">
+          <!-- Primary Location Card -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+            <h3 class="text-base font-bold text-blue-950 flex items-center gap-2">
+              <i class="fa-solid fa-map-location-dot text-amber-600"></i> Official Address &amp; Offices
+            </h3>
+            
+            <div class="text-xs text-slate-700 space-y-2">
+              <p class="font-bold text-slate-900">Aligarh College Of Engineering &amp; Technology (ACET)</p>
+              <p><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> <strong>Main Campus:</strong> 3 KM From Sasni Gate, Mathura Bypass Rd, Aligarh, Uttar Pradesh 202002</p>
+              <p><i class="fa-solid fa-building text-blue-600 mr-1"></i> <strong>City Office:</strong> Court of Wards Compound, Gandhi Park, Aligarh - 202001</p>
+              <p class="text-slate-500 font-mono text-[11px] bg-slate-100 p-2 rounded-xl">
+                Google Plus Code: <strong>R3W3+49 Aligarh, UP</strong>
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="text-slate-400 block text-[11px]">Admissions Helplines</span>
+                <a href="tel:09568200064" class="font-bold text-blue-900 hover:text-amber-600 block">095682 00064</a>
+                <a href="tel:09568200010" class="text-slate-600 hover:text-blue-900 block text-[11px]">095682 00010</a>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Official Email</span>
+                <a href="mailto:info@acetup.org" class="font-bold text-blue-900 hover:text-amber-600">info@acetup.org</a>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Working Hours</span>
+                <span class="font-bold text-emerald-700">Mon - Sat: 8:30 AM – 4:30 PM</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Sunday Status</span>
+                <span class="font-bold text-rose-700">Closed (Opens 8:30 AM Mon)</span>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://maps.google.com/?q=Aligarh+College+Of+Engineering+%26+Technology+Sasni+Gate+Aligarh" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 shadow transition-colors">
+                <i class="fa-solid fa-diamond-turn-right text-amber-400"></i> Get Driving Directions on Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Transit Distance Guide -->
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Distance &amp; Transit Guide</h4>
+            
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50">
+                <span class="flex items-center gap-2 text-slate-700">
+                  <i class="fa-solid fa-train text-amber-600"></i> Aligarh Junction Railway Station
+                </span>
+                <span class="font-bold text-slate-900">~ 5.2 km (12 mins)</span>
+              </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50">
+                <span class="flex items-center gap-2 text-slate-700">
+                  <i class="fa-solid fa-bus text-blue-600"></i> Sasni Gate Bus Stand
+                </span>
+                <span class="font-bold text-slate-900">~ 2.8 km (6 mins)</span>
+              </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50">
+                <span class="flex items-center gap-2 text-slate-700">
+                  <i class="fa-solid fa-road text-emerald-600"></i> Mathura Bypass Road
+                </span>
+                <span class="font-bold text-slate-900">Direct Frontage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed & Quick Inquiry Form -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+          <div class="rounded-3xl overflow-hidden shadow-md border border-slate-200 h-80 bg-slate-200 relative">
+            <iframe 
+              title="ACET Aligarh Location Map"
+              src="https://maps.google.com/maps?q=Aligarh+College+of+Engineering+and+Technology+Mathura+Bypass+Aligarh&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Quick Campus Inquiry Form -->
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="text-base font-bold text-blue-950 mb-1">Schedule a Campus Visit or Request Callback</h3>
+            <p class="text-xs text-slate-500 mb-4">Our dedicated admission counselors will contact you with course specifics and fee scholarships.</p>
+            
+            <form onsubmit="event.preventDefault(); showToast('Inquiry received! Our admissions desk will call you shortly.', 'success'); this.reset();" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Your Full Name *</label>
+                <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-900">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Contact Phone Number *</label>
+                <input type="tel" required placeholder="095682 00064" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-900">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Program of Interest</label>
+                <select class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-900">
+                  <option>B.Tech Computer Science &amp; Engineering</option>
+                  <option>B.Tech AI &amp; Machine Learning</option>
+                  <option>B.Pharma (Bachelor of Pharmacy)</option>
+                  <option>D.Pharma (Diploma in Pharmacy)</option>
+                  <option>MBA (Dual Specialization)</option>
+                  <option>MCA (Computer Applications)</option>
+                  <option>BBA (Business Administration)</option>
+                  <option>BCA (Computer Applications)</option>
+                  <option>Polytechnic Diploma</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Preferred Visit Date</label>
+                <input type="date" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-900">
+              </div>
+              <div class="sm:col-span-2">
+                <button type="submit" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs rounded-xl shadow transition-colors">
+                  Submit Visit Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Footer -->
+  <footer class="bg-brand-950 text-slate-300 pt-16 pb-12 border-t-4 border-amber-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/acet_official_logo.jpg" alt="ACET Official Crest" class="w-14 h-14 rounded-full object-contain border-2 border-amber-400 bg-white">
+            <div>
+              <h3 class="text-base font-bold text-white uppercase tracking-tight">Aligarh College Of Engineering &amp; Technology</h3>
+              <p class="text-[11px] text-amber-400 font-semibold">Affiliated to AKTU Lucknow | Approved by AICTE &amp; PCI</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            "अभियांत्रिक विज्ञानम् लोक कल्याण साधनम्" — Committed to imparting value-based engineering, pharmacy, and managerial education on a peaceful 15-acre green botanical campus at Sasni Gate, Mathura Bypass Road, Aligarh.
+          </p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i> <strong>Campus:</strong> Mathura Bypass Rd, Sasni Gate, Aligarh 202002</p>
+            <p><i class="fa-solid fa-building text-amber-400 mr-1.5"></i> <strong>City Office:</strong> Court of Wards Compound, Gandhi Park, Aligarh 202001</p>
+            <p><i class="fa-solid fa-phone text-amber-400 mr-1.5"></i> 095682 00064 / 10 / 63 / 71 / 070170 43771</p>
+            <p><i class="fa-solid fa-globe text-amber-400 mr-1.5"></i> <a href="http://www.acetup.org/" class="hover:underline text-amber-300">acetup.org</a></p>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Programs Offered</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">B.Tech Computer Science</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">B.Tech AI &amp; Machine Learning</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">B.Pharma (Pharmacy)</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">D.Pharma (Pharmacy)</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">MBA &amp; BBA Management</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">MCA &amp; BCA Applications</a></li>
+            <li><a href="#programs" class="hover:text-amber-400 transition-colors">Polytechnic Engineering</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Quick Portals</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#campus-gallery" class="hover:text-amber-400 transition-colors text-amber-300 font-bold">📸 Real Campus Gallery</a></li>
+            <li><button onclick="openModal('studentPortalModal')" class="hover:text-amber-400 transition-colors text-left">ERP Attendance &amp; Marks</button></li>
+            <li><a href="#fee-calculator" class="hover:text-amber-400 transition-colors">Fee Calculator &amp; Receipt</a></li>
+            <li><button onclick="openModal('grievanceModal')" class="hover:text-amber-400 transition-colors text-left">Grievance Redressal Desk</button></li>
+            <li><button onclick="openModal('prospectusModal')" class="hover:text-amber-400 transition-colors text-left">Download Prospectus</button></li>
+            <li><a href="https://scholarship.up.gov.in" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">UP Scholarship Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Statutory & Contact -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Statutory &amp; Support</h4>
+          <div class="text-xs text-slate-400 space-y-2">
+            <p class="bg-white/5 p-2.5 rounded-lg border border-white/10">
+              <strong class="text-amber-400 block">Anti-Ragging Helpline</strong>
+              Toll-Free: 1800-180-5522 (National) / 095682 00064 (ACET Squad)
+            </p>
+            <p class="text-[11px]">
+              Internal Complaints Committee &amp; SC/ST Welfare Cell operational under AICTE &amp; AKTU norms.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Aligarh College of Engineering &amp; Technology (ACET). All Rights Reserved.</p>
+        <p class="text-center sm:text-right text-[11px]">
+          Sasni Gate, Mathura Bypass Road, Aligarh 202002 • AKTU Code: 096 • Web: <a href="http://www.acetup.org/" class="text-slate-400 hover:text-amber-400">acetup.org</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Full Screen Image Lightbox -->
+  <!-- ======================================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/90 backdrop-blur-md p-4 lightbox-modal">
+    <div class="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col max-h-[92vh]">
+      <!-- Close button -->
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-amber-500 text-white hover:text-black flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <!-- Image Area -->
+      <div class="flex-1 flex items-center justify-center bg-black/80 p-2 overflow-hidden">
+        <img id="lightboxImg" src="" alt="Campus Enlarged" class="max-h-[68vh] w-auto max-w-full object-contain rounded-xl">
+      </div>
+
+      <!-- Caption & Metadata -->
+      <div class="p-5 bg-slate-950 text-white border-t border-white/10">
+        <h4 id="lightboxTitle" class="text-base font-bold text-amber-400 mb-1">Campus View</h4>
+        <p id="lightboxDesc" class="text-xs text-slate-300 leading-relaxed">Photograph from Aligarh College of Engineering &amp; Technology Campus.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: 4-Step Admission Application Wizard -->
+  <!-- ======================================================== -->
+  <div id="admissionModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[92vh]">
+      <!-- Header -->
+      <div class="bg-brand-950 text-white p-5 flex items-center justify-between border-b border-brand-900">
+        <div class="flex items-center gap-3">
+          <img src="assets/acet_official_logo.jpg" alt="ACET Official Logo" class="w-12 h-12 rounded-full object-contain border border-amber-400 bg-white">
+          <div>
+            <h3 class="text-sm font-bold">Online Admission Application (Session 2026-27)</h3>
+            <p class="text-[11px] text-amber-400">AKTU College Code: 096 | AICTE &amp; PCI Approved</p>
+          </div>
+        </div>
+        <button onclick="closeModal('admissionModal')" class="text-slate-400 hover:text-white p-1.5 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Steps Progress Bar -->
+      <div class="bg-slate-100 px-6 py-3 border-b border-slate-200 flex items-center justify-between text-xs">
+        <div class="flex items-center gap-2">
+          <span id="stepIndicator1" class="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-[11px]">1</span>
+          <span class="font-semibold text-slate-700">Personal</span>
+        </div>
+        <div class="h-0.5 flex-1 mx-3 bg-slate-300"></div>
+        <div class="flex items-center gap-2">
+          <span id="stepIndicator2" class="w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-[11px]">2</span>
+          <span class="font-semibold text-slate-700">Program</span>
+        </div>
+        <div class="h-0.5 flex-1 mx-3 bg-slate-300"></div>
+        <div class="flex items-center gap-2">
+          <span id="stepIndicator3" class="w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-[11px]">3</span>
+          <span class="font-semibold text-slate-700">Academic</span>
+        </div>
+        <div class="h-0.5 flex-1 mx-3 bg-slate-300"></div>
+        <div class="flex items-center gap-2">
+          <span id="stepIndicator4" class="w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-[11px]">4</span>
+          <span class="font-semibold text-slate-700">Slip</span>
+        </div>
+      </div>
+
+      <!-- Body / Steps -->
+      <div class="p-6 overflow-y-auto flex-1">
+        <!-- Step 1: Personal -->
+        <div id="admissionStep1" class="space-y-4 text-xs">
+          <h4 class="text-sm font-bold text-slate-900 border-b pb-2">Candidate Details</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Full Name *</label>
+              <input type="text" id="appName" placeholder="e.g. Aman Gupta" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Father's / Guardian's Name *</label>
+              <input type="text" id="appFather" placeholder="Father's Name" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Mobile Phone (WhatsApp Enabled) *</label>
+              <input type="tel" id="appPhone" placeholder="095682 00064" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Email Address *</label>
+              <input type="email" id="appEmail" placeholder="candidate@gmail.com" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">City / District</label>
+              <input type="text" id="appCity" placeholder="e.g. Aligarh / Hathras / Mathura" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Category for State Scholarship</label>
+              <select id="appCategory" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+                <option>General</option>
+                <option>OBC</option>
+                <option>SC / ST (Eligible for Full Govt Fee Reimbursement)</option>
+                <option>EWS</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Program Choice -->
+        <div id="admissionStep2" class="hidden space-y-4 text-xs">
+          <h4 class="text-sm font-bold text-slate-900 border-b pb-2">Program &amp; Accommodation</h4>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Select Program Desired *</label>
+            <select id="appCourse" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Mode of Admission</label>
+            <select id="appMode" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+              <option>Direct Institutional Quota (Merit Basis)</option>
+              <option>UPTAC / AKTU State Counseling 2026</option>
+              <option>JEE Main / CUET-UG Score Holder</option>
+              <option>JEECUP (For Polytechnic)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Campus Hostel Requirement</label>
+            <select class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-900">
+              <option>Day Scholar (No Hostel Needed)</option>
+              <option>Require Boys Hostel Accommodation</option>
+              <option>Require Girls Hostel Accommodation</option>
+              <option>Require College Bus Commute (Sasni Gate / Aligarh City)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 3: Academic Qualifications -->
+        <div id="admissionStep3" class="hidden space-y-4 text-xs">
+          <h4 class="text-sm font-bold text-slate-900 border-b pb-2">Academic Qualifications</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">10th (High School) Board &amp; %</label>
+              <input type="text" placeholder="e.g. CBSE - 82%" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">12th (Intermediate) Stream &amp; %</label>
+              <input type="text" placeholder="e.g. UP Board PCM/PCB - 76%" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Graduation % (for MBA/MCA candidates)</label>
+              <input type="text" placeholder="e.g. BCA/B.Sc - 74%" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+            </div>
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Entrance Roll No / Rank (if any)</label>
+              <input type="text" placeholder="e.g. JEE Main / UPTAC Rank" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+            </div>
+          </div>
+          <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-[11px] text-blue-900">
+            <i class="fa-solid fa-circle-info mr-1 text-blue-700"></i>
+            Original marksheets and documents will be verified at the campus admission counter during physical counseling.
+          </div>
+        </div>
+
+        <!-- Step 4: Generated Slip -->
+        <div id="admissionStep4" class="hidden space-y-4">
+          <div id="applicationSlipContainer">
+            <!-- Populated on submit -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between">
+        <button onclick="prevAdmissionStep()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900">
+          Back
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="nextAdmissionStep()" id="admissionNextBtn" class="px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow">
+            Continue Next
+          </button>
+          <button onclick="printApplicationSlip()" id="admissionPrintBtn" class="hidden px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow flex items-center gap-1.5">
+            <i class="fa-solid fa-print"></i> Print Slip
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Course Details Deep Dive -->
+  <!-- ======================================================== -->
+  <div id="courseModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div id="courseModalContent" class="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden max-h-[90vh] overflow-y-auto">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Student Grievance Redressal Desk -->
+  <!-- ======================================================== -->
+  <div id="grievanceModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-blue-950 text-white p-5 flex items-center justify-between border-b border-blue-900">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-headset text-amber-400 text-lg"></i>
+          <div>
+            <h3 class="text-sm font-bold">Student Grievance &amp; Redressal Cell</h3>
+            <p class="text-[11px] text-slate-300">Confidential, Direct Escalation to College Leadership</p>
+          </div>
+        </div>
+        <button onclick="closeModal('grievanceModal')" class="text-slate-400 hover:text-white p-1.5 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form onsubmit="submitGrievance(event)" class="p-6 space-y-4 text-xs">
+        <div id="grievanceSuccessAlert" class="hidden p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs">
+          <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i>
+          Grievance ticket created! Token: <strong id="grievanceTokenDisplay" class="font-mono"></strong>. Expected resolution within 24 working hours.
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Your Full Name *</label>
+          <input type="text" id="grievanceName" required placeholder="Name" class="w-full px-3 py-2 rounded-xl border border-slate-200">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Category *</label>
+          <select id="grievanceCategory" class="w-full px-3 py-2 rounded-xl border border-slate-200">
+            <option>Fee Structure &amp; Accounts Clarity</option>
+            <option>Computer Lab &amp; AC Facilities</option>
+            <option>Staff / Faculty Interaction &amp; Support</option>
+            <option>Hostel &amp; Canteen Hygiene</option>
+            <option>Academics &amp; Examinations</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Detailed Description *</label>
+          <textarea id="grievanceMsg" required rows="4" placeholder="Please provide specific details regarding your concern..." class="w-full px-3 py-2 rounded-xl border border-slate-200"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2">
+          <button type="button" onclick="closeModal('grievanceModal')" class="px-4 py-2 text-slate-600">Cancel</button>
+          <button type="submit" class="px-5 py-2.5 bg-blue-900 text-white font-bold rounded-xl shadow">Submit for Redressal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Write a Review -->
+  <!-- ======================================================== -->
+  <div id="writeReviewModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-brand-950 text-white p-5 flex items-center justify-between border-b border-brand-900">
+        <h3 class="text-sm font-bold flex items-center gap-2">
+          <i class="fa-regular fa-star text-amber-400"></i> Submit Your Campus Experience
+        </h3>
+        <button onclick="closeModal('writeReviewModal')" class="text-slate-400 hover:text-white p-1.5 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form onsubmit="submitNewReview(event)" class="p-6 space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Your Name *</label>
+          <input type="text" id="newReviewAuthor" required placeholder="e.g. Rahul Sharma" class="w-full px-3 py-2 rounded-xl border border-slate-200">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Your Role / Designation</label>
+            <input type="text" id="newReviewRole" placeholder="e.g. B.Tech Alumnus / Parent" class="w-full px-3 py-2 rounded-xl border border-slate-200">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Rating (Stars)</label>
+            <select id="newReviewRating" class="w-full px-3 py-2 rounded-xl border border-slate-200 font-semibold text-amber-600">
+              <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+              <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+              <option value="3">⭐⭐⭐ 3 Stars</option>
+              <option value="2">⭐⭐ 2 Stars</option>
+              <option value="1">⭐ 1 Star</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Your Feedback / Review *</label>
+          <textarea id="newReviewComment" required rows="4" placeholder="Share your experience regarding academics, infrastructure, lab AC, or green campus..." class="w-full px-3 py-2 rounded-xl border border-slate-200"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2">
+          <button type="button" onclick="closeModal('writeReviewModal')" class="px-4 py-2 text-slate-600">Cancel</button>
+          <button type="submit" class="px-5 py-2.5 bg-amber-500 text-slate-950 font-bold rounded-xl shadow">Publish Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Site Search (Ctrl+K) -->
+  <!-- ======================================================== -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="p-4 border-b border-slate-200 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+        <input 
+          type="text" 
+          id="siteSearchInput" 
+          oninput="handleSearch(this.value)" 
+          placeholder="Search courses, AC labs, fees, notices, photos, address... (Press ESC to close)" 
+          class="w-full text-xs font-semibold text-slate-800 placeholder-slate-400 focus:outline-none"
+        >
+        <button onclick="closeModal('searchModal')" class="text-slate-400 hover:text-slate-600 text-xs font-bold px-2 py-1 bg-slate-100 rounded">ESC</button>
+      </div>
+      <div id="searchResultsContainer" class="p-3 overflow-y-auto max-h-96">
+        <p class="text-xs text-slate-400 p-4 text-center">Type a keyword to search programs, labs, faculty, notices...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Virtual Tour Preview -->
+  <!-- ======================================================== -->
+  <div id="virtualTourModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-brand-950 text-white p-5 flex items-center justify-between">
+        <h3 class="text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-vr-cardboard text-amber-400"></i> ACET 15-Acre Campus Virtual Tour
+        </h3>
+        <button onclick="closeModal('virtualTourModal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="relative h-72 rounded-2xl overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('assets/campus_front.jpg', 'ACET Academic Block', 'Entrance and administrative wing')">
+          <img src="assets/campus_front.jpg" alt="Campus Panoramic View" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+            <div class="text-white">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">Administrative Portico &amp; Green Lawns</span>
+              <p class="text-sm">Main Academic Building located 3 km from Sasni Gate on Mathura Bypass Road, Aligarh.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 text-xs text-center">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <i class="fa-solid fa-snowflake text-cyan-600 text-lg mb-1 block"></i>
+            <strong class="text-slate-800 block">Modern AC Labs</strong>
+            <span class="text-slate-500 text-[11px]">200+ Core i7 Desktops</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <i class="fa-solid fa-book-bookmark text-blue-900 text-lg mb-1 block"></i>
+            <strong class="text-slate-800 block">Digital Library</strong>
+            <span class="text-slate-500 text-[11px]">45,000+ Volumes</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <i class="fa-solid fa-tree text-emerald-600 text-lg mb-1 block"></i>
+            <strong class="text-slate-800 block">Eco Grounds</strong>
+            <span class="text-slate-500 text-[11px]">Clean &amp; Plant-Rich</span>
+          </div>
+        </div>
+
+        <div class="flex justify-end pt-2">
+          <button onclick="closeModal('virtualTourModal')" class="px-5 py-2.5 bg-blue-900 text-white font-bold text-xs rounded-xl shadow">Close Tour</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Download Prospectus -->
+  <!-- ======================================================== -->
+  <div id="prospectusModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-brand-950 text-white p-5 flex items-center justify-between">
+        <h3 class="text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-file-pdf text-amber-400"></i> ACET Institutional Prospectus 2026-27
+        </h3>
+        <button onclick="closeModal('prospectusModal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-4 text-xs">
+        <p class="text-slate-600 leading-relaxed">
+          The official ACET Prospectus includes detailed department syllabi, faculty profiles, transparent fee schedules, hostel amenities, and placement records.
+        </p>
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <div class="flex justify-between">
+            <span class="text-slate-500">File:</span>
+            <span class="font-bold text-slate-800">ACET_Prospectus_2026.pdf</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Size:</span>
+            <span class="font-bold text-slate-800">4.8 MB (Print Resolution)</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Language:</span>
+            <span class="font-bold text-slate-800">Bilingual (English &amp; हिंदी)</span>
+          </div>
+        </div>
+        <div class="pt-2">
+          <button onclick="showToast('Downloading ACET Institutional Prospectus 2026-27...', 'success'); closeModal('prospectusModal')" class="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center gap-2">
+            <i class="fa-solid fa-download"></i> Download PDF Brochure Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: Student ERP Portal Login Simulator -->
+  <!-- ======================================================== -->
+  <div id="studentPortalModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-sm w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="bg-brand-950 text-white p-5 flex items-center justify-between">
+        <h3 class="text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-lock text-amber-400"></i> ACET Student ERP Login
+        </h3>
+        <button onclick="closeModal('studentPortalModal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <form onsubmit="event.preventDefault(); showToast('ERP Credentials Verified! Redirecting to student dashboard...', 'success'); closeModal('studentPortalModal')" class="p-6 space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">AKTU University Roll No / User ID</label>
+          <input type="text" required placeholder="e.g. 210096010045" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Password</label>
+          <input type="password" required placeholder="••••••••" class="w-full px-3 py-2 rounded-xl border border-slate-300">
+        </div>
+        <div class="flex items-center justify-between text-[11px]">
+          <label class="flex items-center gap-1.5 text-slate-600">
+            <input type="checkbox" class="rounded"> Remember ID
+          </label>
+          <a href="#" class="text-blue-900 hover:underline">Forgot?</a>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-blue-900 text-white font-bold rounded-xl shadow">
+          Sign In to Portal
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none max-w-sm"></div>
+
+  <!-- AOS (Animate On Scroll) JS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

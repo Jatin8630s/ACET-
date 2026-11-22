@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="crestBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="50%" stop-color="#0F2459" />
+      <stop offset="100%" stop-color="#0B1A40" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Gold Border -->
+  <circle cx="250" cy="250" r="230" fill="url(#crestBlue)" stroke="url(#crestGold)" stroke-width="12" filter="url(#dropShadow)" />
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#FCD34D" stroke-width="2" stroke-dasharray="6,4" opacity="0.8" />
+  <circle cx="250" cy="250" r="172" fill="#0E214C" stroke="url(#crestGold)" stroke-width="4" />
+
+  <!-- Circular Text Path -->
+  <path id="textPathTop" d="M 75,250 A 175,175 0 0,1 425,250" fill="none" />
+  <path id="textPathBottom" d="M 425,250 A 175,175 0 0,1 75,250" fill="none" />
+
+  <text fill="#FFFFFF" font-family="'Cinzel', serif, Georgia" font-size="21" font-weight="700" letter-spacing="3.5">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+      ALIGARH COLLEGE OF ENGG. &amp; TECH.
+    </textPath>
+  </text>
+
+  <text fill="#FCD34D" font-family="'Cinzel', serif, Georgia" font-size="19" font-weight="600" letter-spacing="4">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
+      * ESTD. 2001 * ALIGARH *
+    </textPath>
+  </text>
+
+  <!-- Central Shield / Heraldic Elements -->
+  <g transform="translate(150, 150)">
+    <!-- Heraldic Shield -->
+    <path d="M 100,5 C 160,5 190,25 190,55 C 190,130 110,180 100,195 C 90,180 10,130 10,55 C 10,25 40,5 100,5 Z" 
+          fill="#1E3A8A" stroke="url(#crestGold)" stroke-width="6" />
+    
+    <!-- Shield Division Line -->
+    <path d="M 100,10 L 100,190" stroke="url(#crestGold)" stroke-width="3" opacity="0.7" />
+    <path d="M 15,95 L 185,95" stroke="url(#crestGold)" stroke-width="3" opacity="0.7" />
+
+    <!-- Top Left: Engineering Gear (Chakra/Wheel) -->
+    <g transform="translate(55, 52) scale(0.7)">
+      <circle cx="0" cy="0" r="22" fill="#F59E0B" />
+      <circle cx="0" cy="0" r="12" fill="#1E3A8A" />
+      <path d="M -4,-28 L 4,-28 L 3,-20 L -3,-20 Z
+               M -4,28 L 4,28 L 3,20 L -3,20 Z
+               M -28,-4 L -28,4 L -20,3 L -20,-3 Z
+               M 28,-4 L 28,4 L 20,3 L 20,-3 Z
+               M -19,-19 L -14,-24 L -8,-18 L -14,-14 Z
+               M 19,19 L 14,24 L 8,18 L 14,14 Z
+               M -19,19 L -24,14 L -18,8 L -14,14 Z
+               M 19,-19 L 24,-14 L 18,-8 L 14,-14 Z" fill="#F59E0B" />
+    </g>
+
+    <!-- Top Right: Torch of Knowledge -->
+    <g transform="translate(145, 50) scale(0.65)">
+      <path d="M 0,-25 C 10,-10 15,0 0,15 C -15,0 -10,-10 0,-25 Z" fill="#EF4444" />
+      <path d="M 0,-15 C 5,-5 8,2 0,10 C -8,2 -5,-5 0,-15 Z" fill="#FCD34D" />
+      <path d="M -8,12 L 8,12 L 5,35 L -5,35 Z" fill="#F59E0B" />
+      <rect x="-10" y="8" width="20" height="5" rx="2" fill="#FCD34D" />
+    </g>
+
+    <!-- Bottom Left: Open Book / Wisdom -->
+    <g transform="translate(55, 142) scale(0.65)">
+      <path d="M 0,0 C -12,-8 -26,-6 -34,-2 L -34,22 C -26,18 -12,16 0,22 C 12,16 26,18 34,22 L 34,-2 C 26,-6 12,-8 0,0 Z" 
+            fill="#FFFFFF" stroke="#D97706" stroke-width="2" />
+      <path d="M 0,0 L 0,22" stroke="#D97706" stroke-width="2" />
+      <line x1="-28" y1="6" x2="-8" y2="3" stroke="#94A3B8" stroke-width="2" />
+      <line x1="-28" y1="12" x2="-8" y2="9" stroke="#94A3B8" stroke-width="2" />
+      <line x1="28" y1="6" x2="8" y2="3" stroke="#94A3B8" stroke-width="2" />
+      <line x1="28" y1="12" x2="8" y2="9" stroke="#94A3B8" stroke-width="2" />
+    </g>
+
+    <!-- Bottom Right: Digital Microchip / Innovation -->
+    <g transform="translate(145, 142) scale(0.65)">
+      <rect x="-18" y="-18" width="36" height="36" rx="4" fill="#10B981" stroke="#FCD34D" stroke-width="2" />
+      <circle cx="0" cy="0" r="6" fill="#FCD34D" />
+      <line x1="-24" y1="-8" x2="-18" y2="-8" stroke="#FCD34D" stroke-width="2" />
+      <line x1="-24" y1="0" x2="-18" y2="0" stroke="#FCD34D" stroke-width="2" />
+      <line x1="-24" y1="8" x2="-18" y2="8" stroke="#FCD34D" stroke-width="2" />
+      <line x1="18" y1="-8" x2="24" y2="-8" stroke="#FCD34D" stroke-width="2" />
+      <line x1="18" y1="0" x2="24" y2="0" stroke="#FCD34D" stroke-width="2" />
+      <line x1="18" y1="8" x2="24" y2="8" stroke="#FCD34D" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Motto Banner -->
+  <g transform="translate(250, 395)">
+    <path d="M -110,-12 L 110,-12 L 125,5 L 110,22 L -110,22 L -125,5 Z" fill="#F59E0B" stroke="#B45309" stroke-width="2" />
+    <text x="0" y="8" fill="#0F172A" font-family="'Cinzel', serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="1.5">
+      KNOWLEDGE • INNOVATION • INTEGRITY
+    </text>
+  </g>
+</svg>

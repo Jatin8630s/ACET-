@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-navy: #0B1938;
+  --secondary-navy: #152852;
+  --accent-gold: #D97706;
+  --gold-light: #FBBF24;
+  --emerald-accent: #059669;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-academic {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==============================================================
+   ANIMATIONS & DYNAMIC EFFECTS
+   ============================================================== */
+
+/* Floating animation */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+.animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.animate-float-reverse {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+/* Shimmer gradient effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Glowing ring pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(217, 119, 6, 0);
+  }
+}
+.pulse-glow-gold {
+  animation: pulse-glow 2.5s infinite;
+}
+
+/* Continuous Marquee animation */
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: scroll-x 35s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Gallery image zoom on hover */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+.gallery-card img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+.gallery-overlay {
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateY(10px);
+}
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-dark {
+  background: rgba(11, 25, 56, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Interactive Card hover lift */
+.hover-lift {
+  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(11, 25, 56, 0.12), 0 10px 15px -5px rgba(11, 25, 56, 0.06);
+}
+
+/* Pulse badge */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+.animate-badge {
+  animation: badge-pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Lightbox overlay */
+.lightbox-modal {
+  transition: opacity 0.3s ease;
+}
+
+/* Print styles for admissions */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-area, #printable-area * {
+    visibility: visible;
+  }
+  #printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
